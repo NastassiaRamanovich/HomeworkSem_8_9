@@ -6,12 +6,11 @@
 // 11 16 15 06
 // 10 09 08 07
 
-Console.Write("Введите число строк матрицы:");
-int m = Convert.ToInt32(Console.ReadLine());
-Console.Write("Введите число столбцов матрицы:");
+
+Console.Write("Введите число столбцов и строк матрицы:");
 int n = Convert.ToInt32(Console.ReadLine());
 
-int[,] array = new int[m, n];
+int[,] array = new int[n, n];
 
 int[,] FillArray(int[,] array)
 {
@@ -32,15 +31,15 @@ int[,] FillArray(int[,] array)
             k += 1;
         }
     }
-    for (int i = m-1; i < array.GetLength(0); i++)
+    for (int i = n-1; i < array.GetLength(0); i++)
     {
-        for (int j = m-2; j >= 0; j--)
+        for (int j = n-2; j >= 0; j--)
         {
             array[i, j] = k;
             k += 1;
         }
     }
-    for (int i = m-2; i > 0; i--)
+    for (int i = n-2; i > 0; i--)
     {
         for (int j = 0; j < 1; j++)
         {
