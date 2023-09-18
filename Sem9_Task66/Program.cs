@@ -4,15 +4,15 @@
 // M = 4; N = 8. -> 30
 
 int sum = 0;
-void PrintNumber(int M, int N)
+void SumNumber(int M, int N)
 {
     if (M > N) 
     {
-        Console.WriteLine(sum);
+        Console.WriteLine("Сумма натуральных элементов от M до N равна " + sum);
         return;
     }
     sum = sum + M;
-    PrintNumber(M + 1, N);
+    SumNumber(M + 1, N);
 }
 
-PrintNumber(4, 8);
+SumNumber(4, 8);
